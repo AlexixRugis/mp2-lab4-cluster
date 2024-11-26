@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\GitHub_Repos\mp2-lab4-cluster\sln\CMakeFiles\a5dadbbb93704137188f280405104670\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{55E901F8-5517-3C97-B3A3-A50BEE2C8E83}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
