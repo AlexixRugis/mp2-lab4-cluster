@@ -178,6 +178,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="C:\GitHub_Repos\mp2-lab4-cluster\test\test_linked_list.cpp" />
     <ClCompile Include="C:\GitHub_Repos\mp2-lab4-cluster\test\test_main.cpp" />
     <ClCompile Include="C:\GitHub_Repos\mp2-lab4-cluster\test\test_queue.cpp" />
   </ItemGroup>

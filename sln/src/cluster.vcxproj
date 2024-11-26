@@ -151,6 +151,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C:\GitHub_Repos\mp2-lab4-cluster\src\queue.cpp" />
+    <ClInclude Include="C:\GitHub_Repos\mp2-lab4-cluster\include\linked_list.h" />
+    <ClInclude Include="C:\GitHub_Repos\mp2-lab4-cluster\include\program_info.h" />
     <ClInclude Include="C:\GitHub_Repos\mp2-lab4-cluster\include\queue.h" />
   </ItemGroup>
   <ItemGroup>

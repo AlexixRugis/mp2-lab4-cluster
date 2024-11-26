@@ -6,6 +6,12 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="C:\GitHub_Repos\mp2-lab4-cluster\include\linked_list.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\GitHub_Repos\mp2-lab4-cluster\include\program_info.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="C:\GitHub_Repos\mp2-lab4-cluster\include\queue.h">
       <Filter>Header Files</Filter>
     </ClInclude>
