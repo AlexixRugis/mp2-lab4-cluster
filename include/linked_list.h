@@ -105,7 +105,7 @@ public:
         }
     }
 
-    linked_list(linked_list&& other) : mSize(other.mSize), mFirst(other.mFirst), mLast(other.mLast)
+    linked_list(linked_list&& other) noexcept : mSize(other.mSize), mFirst(other.mFirst), mLast(other.mLast)
     {
         other.mSize = 0;
         other.mFirst = nullptr;
