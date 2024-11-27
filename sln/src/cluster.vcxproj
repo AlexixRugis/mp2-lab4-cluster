@@ -150,7 +150,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\GitHub_Repos\mp2-lab4-cluster\src\queue.cpp" />
+    <ClCompile Include="C:\GitHub_Repos\mp2-lab4-cluster\src\cluster_statistics.cpp" />
     <ClInclude Include="C:\GitHub_Repos\mp2-lab4-cluster\include\cluster_management_system.h" />
     <ClInclude Include="C:\GitHub_Repos\mp2-lab4-cluster\include\cluster_state.h" />
     <ClInclude Include="C:\GitHub_Repos\mp2-lab4-cluster\include\cluster_statistics.h" />

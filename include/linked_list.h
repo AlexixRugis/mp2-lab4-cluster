@@ -1,6 +1,6 @@
 #pragma once
 #include <initializer_list>
-#include <exception>
+#include <stdexcept>
 
 template<typename T>
 class linked_list

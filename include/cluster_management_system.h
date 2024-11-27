@@ -3,6 +3,7 @@
 #include <cstdint>
 #include <vector>
 #include <exception>
+#include <unordered_set>
 #include "program_info.h"
 #include "cluster_statistics.h"
 #include "cluster_state.h"
@@ -22,37 +23,44 @@ private:
 
     void finish_programs()
     {
+        unordered_set<uint64_t> completedPrograms;
+
         for (auto& p : mState.processors)
         {
             if (p.busy && p.tickEnd <= mState.currentTick)
             {
                 p.busy = false;
                 ++mState.freeProcessors;
-                ++mProgramsDone;
+                completedPrograms.insert(p.programId);
             }
         }
+
+        mProgramsDone += completedPrograms.size();
     }
 
     bool try_start_program()
     {
-        std::optional<program_info> program = mQueue.get(mState);
+        std::optional<std::pair<uint64_t, program_info>> program = mQueue.get(mState);
         if (!program.has_value())
         {
             return false;
         }
 
-        const program_info& program_ref = program.value();
+        const uint64_t programId = program.value().first;
+        const program_info& program_ref = program.value().second;
         uint64_t processorsRemain = program_ref.processors;
 
         for (auto& p : mState.processors)
         {
+            if (processorsRemain == 0) break;
             if (!p.busy)
             {
-                p = {
+                p = processor_state(
                     mState.currentTick,
                     mState.currentTick + program_ref.executionTime,
+                    programId,
                     true
-                };
+                );
 
                 --mState.freeProcessors;
                 --processorsRemain;

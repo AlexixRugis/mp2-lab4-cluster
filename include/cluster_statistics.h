@@ -1,5 +1,6 @@
 #pragma once
 #include <cstdint>
+#include <iostream>
 
 class cluster_statistics final
 {
@@ -22,3 +23,5 @@ public:
     uint64_t ticks() const noexcept { return mTicks; }
     double average_load() const noexcept { return mAverageLoad; }
 };
+
+std::ostream& operator<<(std::ostream& ostr, const cluster_statistics& stats);
