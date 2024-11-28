@@ -151,13 +151,15 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C:\GitHub_Repos\mp2-lab4-cluster\src\cluster_statistics.cpp" />
+    <ClInclude Include="C:\GitHub_Repos\mp2-lab4-cluster\include\basic_queue.h" />
     <ClInclude Include="C:\GitHub_Repos\mp2-lab4-cluster\include\cluster_management_system.h" />
     <ClInclude Include="C:\GitHub_Repos\mp2-lab4-cluster\include\cluster_state.h" />
     <ClInclude Include="C:\GitHub_Repos\mp2-lab4-cluster\include\cluster_statistics.h" />
     <ClInclude Include="C:\GitHub_Repos\mp2-lab4-cluster\include\linked_list.h" />
+    <ClInclude Include="C:\GitHub_Repos\mp2-lab4-cluster\include\planning_queue.h" />
+    <ClInclude Include="C:\GitHub_Repos\mp2-lab4-cluster\include\priority_queue.h" />
     <ClInclude Include="C:\GitHub_Repos\mp2-lab4-cluster\include\processor_state.h" />
     <ClInclude Include="C:\GitHub_Repos\mp2-lab4-cluster\include\program_info.h" />
-    <ClInclude Include="C:\GitHub_Repos\mp2-lab4-cluster\include\queue.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\GitHub_Repos\mp2-lab4-cluster\sln\ZERO_CHECK.vcxproj">

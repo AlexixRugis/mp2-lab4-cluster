@@ -94,7 +94,7 @@ public:
             throw std::invalid_argument(__FUNCTION__ ": can't add program that requires more processors than cluster has.");
         }
 
-        mQueue.push(info);
+        mQueue.push(info, mState.currentTick);
         ++mProgramsAdded;
     }
 

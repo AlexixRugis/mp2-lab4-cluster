@@ -194,7 +194,10 @@ public:
         {
             node* tmp = mFirst;
             mFirst = mFirst->next;
-            mFirst->prev = nullptr;
+            if (mFirst != nullptr)
+            {
+                mFirst->prev = nullptr;
+            }
             delete tmp;
         }
 
@@ -282,27 +285,28 @@ public:
             throw std::out_of_range(__FUNCTION__ ": can't erase after end of list.");
         }
 
-        if (pos.mPrevious != nullptr)
-        {
-            pos.mPrevious->next = pos.mCurrent->next;
-        }
-        if (pos.mCurrent->next != nullptr)
-        {
-            pos.mCurrent->next = pos.mPrevious;
-        }
-
         if (pos.mCurrent == mFirst)
         {
-            mFirst = nullptr;
+            pop_front();
         }
-        if (pos.mCurrent == mLast)
+        else if (pos.mCurrent == mLast)
         {
-            mLast = nullptr;
+            pop_back();
         }
+        else
+        {
+            if (pos.mPrevious != nullptr)
+            {
+                pos.mPrevious->next = pos.mCurrent->next;
+            }
+            if (pos.mCurrent->next != nullptr)
+            {
+                pos.mCurrent->next->prev = pos.mPrevious;
+            }
 
-        --mSize;
-
-        delete pos.mCurrent;
+            --mSize;
+            delete pos.mCurrent;
+        }
     }
 
     iterator begin() const noexcept { return iterator(nullptr, mFirst); }

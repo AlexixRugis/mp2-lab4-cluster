@@ -217,6 +217,37 @@ TEST(LinkedListTest, can_use_iterators)
     EXPECT_THROW(*it, std::out_of_range);
 }
 
+TEST(LinkedListTest, can_erase_first)
+{
+    linked_list<int> list = { 1, 2, 3 };
+    auto it = list.begin();
+    EXPECT_EQ(list.front(), 1);
+    list.erase(it);
+    EXPECT_EQ(list.front(), 2);
+    EXPECT_EQ(list.size(), 2);
+}
+
+TEST(LinkedListTest, can_erase_last)
+{
+    linked_list<int> list = { 1, 2, 3 };
+    auto it = --list.end();
+    EXPECT_EQ(list.back(), 3);
+    list.erase(it);
+    EXPECT_EQ(list.back(), 2);
+    EXPECT_EQ(list.size(), 2);
+}
+
+TEST(LinkedListTest, can_erase_middle)
+{
+    linked_list<int> list = { 1, 2, 3 };
+    auto it = ++list.begin();
+    EXPECT_EQ(*it, 2);
+    list.erase(it);
+    EXPECT_EQ(list.front(), 1);
+    EXPECT_EQ(list.back(), 3);
+    EXPECT_EQ(list.size(), 2);
+}
+
 TEST(LinkedListTest, check_iterator_errors)
 {
     linked_list<int> list;

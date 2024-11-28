@@ -6,6 +6,9 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="C:\GitHub_Repos\mp2-lab4-cluster\include\basic_queue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="C:\GitHub_Repos\mp2-lab4-cluster\include\cluster_management_system.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -18,13 +21,16 @@
     <ClInclude Include="C:\GitHub_Repos\mp2-lab4-cluster\include\linked_list.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="C:\GitHub_Repos\mp2-lab4-cluster\include\planning_queue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\GitHub_Repos\mp2-lab4-cluster\include\priority_queue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="C:\GitHub_Repos\mp2-lab4-cluster\include\processor_state.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\GitHub_Repos\mp2-lab4-cluster\include\program_info.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\GitHub_Repos\mp2-lab4-cluster\include\queue.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

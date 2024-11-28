@@ -24,7 +24,7 @@ public:
         return p;
     }
 
-    uint64_t push(const program_info& program)
+    uint64_t push(const program_info& program, uint64_t tick)
     {
         uint64_t id = mNextId++;
         mPrograms.push_back({ id, program });

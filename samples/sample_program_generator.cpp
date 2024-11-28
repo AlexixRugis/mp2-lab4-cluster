@@ -1,7 +1,9 @@
 #include <iostream>
 #include <random>
 #include "cluster_management_system.h"
-#include "queue.h"
+#include "basic_queue.h"
+#include "priority_queue.h"
+#include "planning_queue.h"
 
 using namespace std;
 
@@ -17,11 +19,15 @@ program_info generate_program()
 }
 
 int main() {
+    g.seed(0);
+
     uniform_real_distribution<float> program_gen_dist;
 
     cluster_management_system<basic_queue> cms(64);
+    //cluster_management_system<priority_queue<1000>> cms(64);
+    //cluster_management_system<planning_queue<100>> cms(64);
 
-    for (size_t i = 0; i < 100000; ++i)
+    for (size_t i = 0; i < 1000000; ++i)
     {
         for (size_t j = 0; j < 64; ++j)
         {
