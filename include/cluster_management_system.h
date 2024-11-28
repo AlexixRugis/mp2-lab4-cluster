@@ -23,7 +23,7 @@ private:
 
     void finish_programs()
     {
-        unordered_set<uint64_t> completedPrograms;
+        std::unordered_set<uint64_t> completedPrograms;
 
         for (auto& p : mState.processors)
         {

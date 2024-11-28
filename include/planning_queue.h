@@ -48,7 +48,7 @@ public:
         }
 
         uint64_t timeToStart = get_ticks_wait(state, requiredProcessors);
-        
+
         uint64_t lookAhead = LookAhead;
         for (auto iter = mPrograms.begin(); iter != mPrograms.end() && lookAhead > 0; ++iter, --lookAhead)
         {
@@ -60,7 +60,7 @@ public:
                 return tmp;
             }
         }
-        
+
         return std::nullopt;
     }
 

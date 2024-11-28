@@ -9,5 +9,6 @@ struct processor_state
     bool busy;
 
     processor_state(uint64_t start = 0, uint64_t end = 0, uint64_t pid = 0, bool busy_ = false)
-        : tickStart(start), tickEnd(end), programId(pid), busy(busy_) {}
+        : tickStart(start), tickEnd(end), programId(pid), busy(busy_)
+    {}
 };

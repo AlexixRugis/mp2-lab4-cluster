@@ -18,14 +18,15 @@ program_info generate_program()
     return { processors_dist(g), ticks_dist(g) };
 }
 
-int main() {
+int main()
+{
     g.seed(0);
 
     uniform_real_distribution<float> program_gen_dist;
 
-    cluster_management_system<basic_queue> cms(64);
+    //cluster_management_system<basic_queue> cms(64);
     //cluster_management_system<priority_queue<1000>> cms(64);
-    //cluster_management_system<planning_queue<100>> cms(64);
+    cluster_management_system<planning_queue<100>> cms(64);
 
     for (size_t i = 0; i < 1000000; ++i)
     {

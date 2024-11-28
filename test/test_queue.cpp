@@ -181,7 +181,7 @@ TEST(PriorityQueueTest, can_get_after_first)
 {
     priority_queue<3> queue;
     cluster_state state{ 2, 0, std::vector<processor_state>(2) };
-    
+
     program_info prog1{ 1, 5 };
     program_info prog2{ 2, 5 };
     program_info prog3{ 1, 5 };
@@ -193,7 +193,7 @@ TEST(PriorityQueueTest, can_get_after_first)
     auto result = queue.get(state);
     EXPECT_TRUE(result.has_value());
     EXPECT_EQ(result.value().first, 0);
-    
+
     state.freeProcessors -= 1;
     state.currentTick++;
     result = queue.get(state);

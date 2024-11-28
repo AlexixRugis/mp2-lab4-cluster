@@ -288,12 +288,10 @@ public:
         if (pos.mCurrent == mFirst)
         {
             pop_front();
-        }
-        else if (pos.mCurrent == mLast)
+        } else if (pos.mCurrent == mLast)
         {
             pop_back();
-        }
-        else
+        } else
         {
             if (pos.mPrevious != nullptr)
             {

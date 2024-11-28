@@ -31,8 +31,7 @@ public:
                 std::pair<uint64_t, program_info> res{ p.program_id, p.program_info };
                 mPrograms.erase(iter);
                 return res;
-            }
-            else if (state.currentTick - p.tick_added > MaxDelay)
+            } else if (state.currentTick - p.tick_added > MaxDelay)
             {
                 break;
             }

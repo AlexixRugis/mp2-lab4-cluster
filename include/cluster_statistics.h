@@ -15,7 +15,8 @@ private:
 public:
     cluster_statistics(uint64_t programsAdded, uint64_t programsDone, uint64_t programsStarted, uint64_t ticks, double averageLoad)
         : mProgramsAdded(programsAdded), mProgramsDone(programsDone), mProgramsStarted(programsStarted),
-        mTicks(ticks), mAverageLoad(averageLoad) {}
+        mTicks(ticks), mAverageLoad(averageLoad)
+    {}
 
     uint64_t programs_added() const noexcept { return mProgramsAdded; }
     uint64_t programs_done() const noexcept { return mProgramsDone; }
